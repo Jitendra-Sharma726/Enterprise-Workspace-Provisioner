@@ -1,0 +1,14 @@
+---
+- name: Prepare Server Infrastructure
+  hosts: webservers
+  tasks:
+    - name: Create standard enterprise deployment directories
+      ansible.builtin.file:
+        path: "{{ root }}{{ item }}"
+        state: directory
+        mode: '0755'
+      loop:
+        - /var/www/html/public
+        - /var/www/html/private
+        - /etc/myapp/config
+        - /var/log/myapp/audit
