@@ -43,3 +43,9 @@ This project demonstrates how Configuration Management can automate infrastructu
 ## Outcome
 
 Successfully automated the provisioning of enterprise deployment directories across staging and production environments using Ansible, establishing a consistent and deployment-ready infrastructure foundation while reducing manual administration overhead.
+
+## Run the Command
+
+source .env/bin/activate
+ansible-playbook main.yml
+
